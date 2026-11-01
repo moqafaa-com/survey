@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>استبيان عملاء محمصة مقفّى</title>
+  <meta name="theme-color" content="#E6E3DE">
+  <link rel="icon" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+
+    <header class="brand">
+      <img src="logo.png" alt="شعار محمصة مقفّى" class="logo">
+      <h1>رأيك يهمّنا</h1>
+      <p class="lead">سبع أسئلة قصيرة، وإجاباتك بكلماتك أنت. تساعدنا نحمّص لك أحسن.</p>
+    </header>
+
+    <section id="intro" class="card">
+      <p>ما فيه إجابة صح أو غلط. اكتب اللي في بالك، وتقدر تتخطى أي سؤال ما تبي تجاوب عليه.</p>
+      <button type="button" class="btn" id="startBtn">ابدأ الاستبيان</button>
+    </section>
+
+    <form id="surveyForm" class="card" hidden novalidate>
+      <div class="progress" aria-hidden="true"><span id="bar"></span></div>
+      <p class="step" id="stepLabel" aria-live="polite"></p>
+      <h2 id="questionText" tabindex="-1"></h2>
+      <label class="sr-only" for="answer">إجابتك</label>
+      <textarea id="answer" rows="6" maxlength="1200" placeholder="اكتب إجابتك هنا"></textarea>
+      <div class="nav">
+        <button type="button" class="btn ghost" id="backBtn">السابق</button>
+        <button type="button" class="btn" id="nextBtn">التالي</button>
+      </div>
+      <p class="msg" id="errorMsg" role="alert" hidden></p>
+    </form>
+
+    <section id="thanks" class="card" hidden>
+      <h2>يعطيك العافية</h2>
+      <p id="thanksText">وصلتنا إجاباتك، وكل كلمة منها نقرأها. نحمّص لك الأحسن دايم.</p>
+    </section>
+
+    <footer>
+      <p>محمصة مقفّى — نحمّص لكم بكل حب من المدينة المنورة</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
